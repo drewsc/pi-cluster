@@ -1,15 +1,4 @@
-#.sops.yaml
-
 creation_rules:
   - path_regex: .*.yaml
     encrypted_regex: ^(data|stringData)$
     age: age15pslz2kglrra2g4wf5kraqjphxkfcq6vx9l69j0g7ku23epl4qzs8d6355
-
-
-# in the apps.yaml Kustomization file, add under spec:
-# (same level as prune: true)
-
-decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
