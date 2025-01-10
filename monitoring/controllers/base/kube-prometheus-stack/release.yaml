@@ -42,11 +42,11 @@ spec:
         hosts:
           - grs.mpdev.us
 
-          ## TLS configuration for grafana Ingress
+        ## TLS configuration for grafana Ingress
         ## Secret must be manually created in the namespace
         ##
-        tls: []
-        # - secretName: grafana-general-tls
-        #   hosts:
-        #   - grafana.example.com
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+            - grs.mpdev.us
         
